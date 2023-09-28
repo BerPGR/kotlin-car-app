@@ -4,6 +4,7 @@ import android.app.Activity
 import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
+import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.bernardo.wheelsanddeals.databinding.ActivityMainLayoutBinding
 
 class MainActivity : Activity() {
@@ -14,6 +15,8 @@ class MainActivity : Activity() {
         binding = ActivityMainLayoutBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        window.statusBarColor = Color.parseColor("#040F0F")
+        val recyclerViewBrands = binding.recyclerViewBrands
+        recyclerViewBrands.layoutManager = LinearLayoutManager(this)
+
     }
 }
