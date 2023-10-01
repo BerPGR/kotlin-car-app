@@ -5,39 +5,6 @@
     android:orientation="vertical"
     >
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <androidx.appcompat.widget.Toolbar
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/dark_green"
-            android:padding="8dp"
-            >
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Wheels &amp; Deals"
-                    android:layout_gravity="start"
-                    android:textSize="22sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    />
-
-                <androidx.appcompat.widget.AppCompatImageButton
-                    android:id="@+id/btSettings"
-                    android:src="@drawable/icon_settings"
-                    android:layout_height="45dp"
-                    android:layout_width="45dp"
-                    android:layout_gravity="end"
-                    />
-
-        </androidx.appcompat.widget.Toolbar>
-
-    </com.google.android.material.appbar.AppBarLayout>
-
     <SearchView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -46,12 +13,53 @@
         android:background="#e0e0e0"
         />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewBrands"
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:orientation="horizontal"
+        android:text="Melhores marcas da semana"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="@color/richblack"
         />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewBrands"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dê uma olhada nos tipos de carro"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
+        android:textSize="24sp"
+        android:textColor="@color/richblack"
+        android:textStyle="bold"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewTypes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            />
+    </LinearLayout>
 
 </LinearLayout>
